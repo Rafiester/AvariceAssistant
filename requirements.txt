@@ -33,6 +33,7 @@ humanize
 jikanpy
 justwatch
 lxml
+newspaper3k
 oauth2client
 pendulum
 Pillow
