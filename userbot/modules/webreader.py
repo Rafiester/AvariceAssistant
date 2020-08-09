@@ -71,7 +71,7 @@ async def webread_tl(web):
     )
 
     await web.edit(
-        f"**Title:**\n`{article.title}`\n**Source:**\n`{url}`\n\nTranslated: [Click Here](https://telegra.ph/{response['path']})"
+        f"**Title:**\n`{article.title}`\n**Source:**\n`{url}`\n\n**Translated:** [Click Here](https://telegra.ph/{response['path']})"
     )
 
 
