@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    "`I'm not online for now, wait for a while or try to reach me in other way :p`",
-    "`Just threw your message here, and maybe i'll read it if i want...`",
-    "`Try to reach me on hyperion if you can :p`",
-    "`Am i sleep? maybe...`",
+    "I'm not online for now, wait for a while or try to reach me in other way :p",
+    "Just threw your message here, and maybe i'll read it if i want...",
+    "Try to reach me on hyperion if you can :p",
+    "Am i sleep? maybe...",
 ]
 # =================================================================
 
@@ -42,7 +42,7 @@ async def mention_afk(mention):
     global afk_start
     global afk_end
     not_afk = datetime.now()
-    afk_end = not_awfk.replace(microsecond=0)
+    afk_end = not_afk.replace(microsecond=0)
     if mention.message.mentioned and not (await mention.get_sender()).bot:
         if ISAFK:
             now = datetime.now()
