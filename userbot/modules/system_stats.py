@@ -205,15 +205,13 @@ async def amireallyalive(alive):
     uptime = await get_readable_time((time.time() - StartTime))
     img = IMG
     caption = (
-        "`"
-        "I'm alive, at your services....\n"
-        f"-------------------------------\n"
-        f"👤 User             : {DEFAULTUSER}\n\n"
-        f"🐍 Python           : {python_version()}\n\n"
-        f"💻 Telethon version : {version.__version__}\n\n"
-        f"🕒 Bot Uptime       : {uptime}\n"
-        f"-------------------------------\n"
-        "`"
+        ""
+        "こんにちは!!! ~ HANA-CI Userbot Here (˃ᴗ˂) ~\n\n"
+        f"👤 User             : `Nicklas373`\n"
+        f"🐍 Python           : `{python_version()}`\n"
+        f"💻 Telethon version : `{version.__version__}`\n"
+        f"🕒 Bot Uptime       : `{uptime}`\n"
+        ""
     )
     await bot.send_file(alive.chat_id, img, caption=caption)
     await alive.delete()
