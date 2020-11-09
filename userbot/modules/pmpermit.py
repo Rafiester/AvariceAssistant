@@ -24,7 +24,7 @@ from userbot.events import register
 UNAPPROVED_MSG = (
     "こんにちは!!! ~ HANA-CI Userbot Here (˃ᴗ˂)~\n\n"
     "`Currently i haven't approved to your PM for now :3\n`"
-    "`Please wait until i look and approve it\n'"
+    "`Please wait until i look and approve it\n`"
     "`Until then, please don't spam with PM on me or you'll get blocked and reported if you do so!`"
 )
 # =================================================================

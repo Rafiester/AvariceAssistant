@@ -196,11 +196,11 @@ async def set_afk(afk_e):
     afk_start = start1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit("I'm AFK now... See ya :3" f"\nBecause of: `{string}`")
+        await afk_e.edit("I'm AFK now... \nSee ya :3" f"\nBecause of: `{string}`")
     else:
-        await afk_e.edit("I'm AFK now... See ya :3")
+        await afk_e.edit("I'm AFK now... \nSee ya :3")
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nAFK Now:3")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nAFK Now :3")
     ISAFK = True
     afk_time = datetime.now()
     raise StopPropagation
