@@ -22,10 +22,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "`HeY! This is an automated message.\n\n`"
-    "`I haven't approved you to PM yet.`"
-    "`Please wait for me to look in, I mostly approve PMs.\n\n`"
-    "`Until then, please don't spam my Mastor's PM, you'll get blocked and reported if you do so!`"
+    "こんにちは!!! ~ HANA-CI Userbot Here (˃ᴗ˂)~\n\n"
+    "`Currently i haven't approved to your PM for now :3\n`"
+    "`Please wait until i look and approve it\n'"
+    "`Until then, please don't spam with PM on me or you'll get blocked and reported if you do so!`"
 )
 # =================================================================
 
@@ -77,7 +77,7 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > 4:
                 await event.respond(
-                    "`You were spamming my Mastor's PM, which I didn't like.`\n"
+                    "`You already spamming on my PM, which i didn''t like it.`\n"
                     "`You have been BLOCKED and reported as SPAM, until further notice.`"
                 )
 
@@ -105,7 +105,7 @@ async def permitpm(event):
                         + "](tg://user?id="
                         + str(event.chat_id)
                         + ")"
-                        + " was just another retarded nibba",
+                        + " was just another ugly person",
                     )
 
 

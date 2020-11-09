@@ -207,10 +207,10 @@ async def amireallyalive(alive):
     caption = (
         ""
         "こんにちは!!! ~ HANA-CI Userbot Here (˃ᴗ˂) ~\n\n"
-        f"👤 User             : `Nicklas373`\n"
-        f"🐍 Python           : `{python_version()}`\n"
-        f"💻 Telethon version : `{version.__version__}`\n"
-        f"🕒 Bot Uptime       : `{uptime}`\n"
+        f"👤 User             : ` Nicklas373`\n"
+        f"🐍 Python           : ` {python_version()}`\n"
+        f"💻 Telethon version : ` {version.__version__}`\n"
+        f"🕒 Bot Uptime       : ` {uptime}`\n"
         ""
     )
     await bot.send_file(alive.chat_id, img, caption=caption)

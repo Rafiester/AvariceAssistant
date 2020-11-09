@@ -74,9 +74,9 @@ async def mention_afk(mention):
             if mention.sender_id not in USERS:
                 if AFKREASON:
                     await mention.reply(
-                        "I'm AFK right now."
-                        f"\nBecause `{AFKREASON}`."
-                        f"\nAFK since: {afk_str}"
+                        "I might not online for now (AFK)."
+                        f"\nBecause of `{AFKREASON}`."
+                        f"\nAnd AFK since: {afk_str}"
                     )
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -86,9 +86,9 @@ async def mention_afk(mention):
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await mention.reply(
-                            "I'm still AFK."
-                            f"\nReason: `{AFKREASON}`."
-                            f"\nAFK from: {afk_str}"
+                            "I might still not online for now (AFK)."
+                            f"\nBecause of: `{AFKREASON}`."
+                            f"\nAnd AFK from: {afk_str}"
                         )
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -155,9 +155,9 @@ async def afk_on_pm(sender):
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(
-                        "I'm AFK right now."
-                        f"\nReason: `{AFKREASON}`."
-                        f"\nAFK since: {afk_str}"
+                        "I might not online for now (AFK)."
+                        f"\nBecause of: `{AFKREASON}`."
+                        f"\nAnd AFK since: {afk_str}"
                     )
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -167,9 +167,9 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await sender.reply(
-                            "I'm still AFK."
-                            f"\nReason: `{AFKREASON}`."
-                            f"\nAFK from: {afk_str}"
+                            "I might still not online for now (AFK)."
+                            f"\nBecause of: `{AFKREASON}`."
+                            f"\nAnd AFK from: {afk_str}"
                         )
                     else:
                         await sender.reply(str(choice(AFKSTR)))
@@ -196,11 +196,11 @@ async def set_afk(afk_e):
     afk_start = start1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit("Going AFK!" f"\nReason: `{string}`")
+        await afk_e.edit("I'm AFK now... See ya :3" f"\nBecause of: `{string}`")
     else:
-        await afk_e.edit("Going AFK!")
+        await afk_e.edit("I'm AFK now... See ya :3")
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nYou went AFK!")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nAFK Now:3")
     ISAFK = True
     afk_time = datetime.now()
     raise StopPropagation
@@ -220,13 +220,13 @@ async def type_afk_is_not_true(notafk):
     afk_end = not_afk.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("I'm no longer AFK.")
+        msg = await notafk.respond("I'm here :3.")
         await sleep(2)
         await msg.delete()
         if BOTLOG:
             await notafk.client.send_message(
                 BOTLOG_CHATID,
-                "You've recieved "
+                "You've received "
                 + str(COUNT_MSG)
                 + " messages from "
                 + str(len(USERS))
