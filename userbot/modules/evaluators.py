@@ -86,7 +86,7 @@ execute. Use .help exec for an example.```"
         )
         return
 
-    if code in ("userbot.session", "config.env"):
+    if code in ("userbot.session", "config.env", "env"):
         await run_q.edit("`That's a dangerous operation! Not Permitted!`")
         return
 
@@ -159,7 +159,7 @@ async def terminal_runner(term):
         )
         return
 
-    if command in ("userbot.session", "config.env"):
+    if command in ("userbot.session", "config.env", "env", "$", "$*", "echo"):
         await term.edit("`That's a dangerous operation! Not Permitted!`")
         return
 
