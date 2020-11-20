@@ -226,7 +226,7 @@ DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", None)
 # Image for alive
 IMG = os.environ.get(
     "IMG",
-    "https://telegra.ph/file/e775c7868d688dc7a4beb.png")
+    "https://telegra.ph/file/ed9145199ca60e5f880a3.jpg")
 
 # Set default timezone
 TZ = os.environ.get("TZ", "Asia/Jakarta")
