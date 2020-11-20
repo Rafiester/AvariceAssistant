@@ -206,11 +206,9 @@ async def amireallyalive(alive):
     img = IMG
     caption = (
         ""
-                     f"------------------------------------\n"
-                     f"•  Master           : {DEFAULTUSER}\n"
-                     f"•  Python           : {python_version()}\n"
-                     f"•  Telethon version : {version.__version__}\n"
-                     f"------------------------------------\n"
+                     f"•  Master           : `{DEFAULTUSER}`\n"
+                     f"•  Python           : `{python_version()}`\n"
+                     f"•  Telethon version : `{version.__version__}`\n"
                      ""
     )
     await bot.send_file(alive.chat_id, img, caption=caption)
