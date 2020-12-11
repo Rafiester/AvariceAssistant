@@ -12,6 +12,11 @@ RUN git clone https://github.com/Rafiester/AvariceAssistant -b sql-extended /One
 COPY ./sample_config.env ./userbot.session* ./config.env* /One4uBot/
 
 #
+# Make open port TCP
+#
+EXPOSE 80 443
+
+#
 # Finalization
 #
 CMD ["python3","-m","userbot"]
