@@ -8,4 +8,7 @@ RUN git clone -b userbutt https://github.com/Rafiester/AvariceAssistant /root/us
 RUN mkdir /root/userbutt/bin/
 WORKDIR /root/userbutt/
 
+# Make open port TCP
+EXPOSE 80 443
+
 CMD ["python3","-m","userbutt"]
